@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/schedule.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/sign-up.css">
+    <title>Calendar</title>
+</head>
+<body>
+    <section class="sign-up">
+        <div class="sign-up_container">
+            <p class="title">
+                Sign Up
+            </p>
+            <form class="sign-up_form">
+                <input id="userName" placeholder="Username..." name="name" type="text" class="input"  value="" required>
+                <input id="regLogin" placeholder="Email..." name="email" type="text" class="input" value="" required>
+                <input id="regPass" placeholder="Password..." name="pass" type="password" class="input" value="" required>
+                <button id="rgstr_btn" onclick="userStorage(event);"  class="form_btn">Accept</button>
+            </form>
+        </div>
+        <p class="text">
+            Already have an account? Try to <span class="text_span"><a href="sign-in.html" class="text_span"><u>Sign-in</u></a>!</span> 
+        </p>
+        <div class="message">
+            <h1 class="message_title"></h1>
+            <p class="message_text"></p>
+        </div>
+    </section>
+</body>
+<script src="js/helper.js"></script>
+<script src="js/register_user.js"></script>
+</html>

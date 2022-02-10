@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/schedule.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/sign-in.css">
+    <title>Calendar</title>
+</head>
+<body>
+    <section class="sign-in">
+        <div class="sign-in_container">
+            <p class="title">
+                Sign In
+            </p>
+            <form class="sign-in_form">
+                <input id="login" placeholder="Email..." name="email" type="email" class="input" value="" required>
+                <input id="pass" placeholder="Password..." name="pass" type="password" class="input" value="" required>
+                <button id="login_btn" class="form_btn" onclick="login_user(event)">Accept</button>
+            </form>
+        </div>
+        <p class="text">
+            Don't have an account? Try to <span class="text_span"><a href="sign-up.html" class="text_span"><u>Sign-up</u></a>!</span> 
+        </p>
+        <div class="message">
+            <h1 class="message_title"></h1>
+            <p class="message_text"></p>
+        </div>
+    </section>
+</body>
+<script src="js/helper.js"></script>
+<script src="js/login_user.js"></script>
+</html>

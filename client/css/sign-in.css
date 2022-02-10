@@ -1,0 +1,88 @@
+@import url(reset.css);
+@import url(message.css);
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #a1a1a1;
+}
+
+.sign-in {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sign-in_container {
+    width: 300px;
+    height: 210px;
+    border: 2px solid #d7d7d7;
+    border-radius: 10px;
+}
+
+.title {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 0px;
+    margin-top: 5px;
+}
+
+.sign-in_form {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.input {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 10px;
+    height: 40px;
+    border: 2px solid #d7d7d7;
+    border-radius: 10px;
+    font-size: 15px;
+    padding-left: 15px;
+    outline: none;
+    background-color: #e6e6e6;
+    color: #6d6d6d;
+    transition: all 0.5s ease;
+}
+
+.input:hover {
+    border: 2px solid #6d6d6d;
+}
+
+.form_btn {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: #FFF;
+    width: 150px;
+    margin: 10px auto auto;
+    height: 35px;
+    background-color: #e46562;
+    border: 2px solid #e46562;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.form_btn:hover {
+    border: 2px solid #db4846;
+}
+
+.text {
+    font-size: 18px;
+    color: #757575;
+}
+
+.text_span {
+    font-size: 22px;
+    color: #5f2f2b;
+    opacity: 90%;
+    transition: all 0.5s ease;
+}
+
+.text_span:hover {
+    opacity: 100%;
+}
