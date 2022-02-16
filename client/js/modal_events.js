@@ -1,9 +1,8 @@
 let modalEvent = document.getElementById("myModalEvent");
-let modalTitle = document.querySelector('.modal-titleEvent');
+let modalTitle = document.getElementsByClassName("modal-titleEvent")[0];
 let dayBtn = document.getElementById("dayBtn");
 let modalConfirm = document.getElementById("myModalConfirm");
 let fnEvent = onLoadEvents();
-
 
 function openModal(i, month, year) {
   modalEvent.style.display = "block";
@@ -18,8 +17,10 @@ function closeModal() {
 
 function onLoadEvents() {
   let temp = null;
-  return function(data = temp){
-    if(temp == null) temp = data;
+  return function(data = temp){ 
+    if(temp == null) {
+      temp = data
+    }
     else temp = data;
     fetch('http://localhost:3000/events', {
       headers: {'Authorization': 'Bearer ' + localStorage.getItem('token') }
@@ -28,16 +29,12 @@ function onLoadEvents() {
     .then(result => {
       for(let i = 0; i < result.length; i++){
       if(result[i].date == data) {
-        document.getElementsByClassName("container_events")[0].innerHTML += `<div class="event" id="event_${i}" onclick="openDisc()">${result[i].title}<span id="${i}" class="delete" onclick="openConfirm(${i});">&times;</span></div>`
+        document.getElementsByClassName("container_events")[0].innerHTML += `<div class="event" id="event_${i}">${result[i].title}<span id="${i}" class="delete" onclick="openConfirm(${i});">&times;</span></div>`
       }
     }
   })
     return temp;
   }
-}
-
-function openDisc() {
-  console.log('click');
 }
 
 function openConfirm(id) {
@@ -67,7 +64,7 @@ function onDeleteEvent(id) {
       console.log(result)
   })
   document.getElementsByClassName('container_events')[0].remove();
-  document.getElementsByClassName('event_modal')[0].innerHTML += "<div class='container_events'></div>";
+  document.getElementsByClassName('modal-content_event')[0].innerHTML += "<div class='container_events'></div>";
   setTimeout(() => fnEvent(), 100);
   closeConfirm();
   let calendar = new Calendar();

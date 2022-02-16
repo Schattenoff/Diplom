@@ -4,7 +4,8 @@
 body {
     font-family: 'Roboto', sans-serif;
     color: #FFF;
-    overflow: hidden;
+    overflow-x: hidden;
+    height: 100vh;
 }
 
 :root{
@@ -22,20 +23,23 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto;
 }
 
+.nav__header {
+    padding: 30px 30px;
+    background-color: var(--color-theme);
+}
+
 .nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
-    background-color: var(--color-theme);
+    position: relative;
 }
 
 .logout_block {
     display: flex;
     align-items: center;
     position: absolute;
-    right: 220px;
-    
+    right: 0px;   
 }
 
 .name {
@@ -60,14 +64,18 @@ h1, h2, h3, h4, h5, h6 {
 .logout_btn:hover {
     background-color: var(--color-theme)
 }
-.section-calendar {
-    height: 100vh;
-}
 
 .navigation_calendar {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     width: 410px;
+    position: relative;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
 }
 
 .arrow {
@@ -151,6 +159,10 @@ h1, h2, h3, h4, h5, h6 {
     bottom: 4px;
 }
 
+.block_selector {
+    position: relative;
+}
+
 .select-color {
     position: absolute;
     font-family: 'Roboto', sans-serif;
@@ -162,19 +174,19 @@ h1, h2, h3, h4, h5, h6 {
     border: 2px solid #868686;
     border-radius: 10px;
     cursor: pointer;
-    right: 220px;
-    top: 153px;
+    right: 0px;
+    bottom: 240px;
 }
 
 .add_events {
-    position: fixed;
+    position: absolute;
     height: 100px;
     width: 100px;
     border-radius: 50%;
-    bottom: 30px;
-    right: 220px;
     background-color: var(--color-theme);
     cursor: pointer;
+    right: 0px;
+    top: 30px;
 }
 
 .horizontal-plus {
@@ -430,3 +442,100 @@ h1, h2, h3, h4, h5, h6 {
     color: #0000ff;
 }
 
+@media screen and (max-width: 992px) {
+    .container {
+        width: 720px;
+    }
+
+    .nav {
+        justify-content: space-between;
+    }
+
+    .add_events {
+        top: -96px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 540px;
+    }
+
+    .select-color {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        width: 90%;
+    }
+
+    .nav__header {
+        padding: 10px 10px;
+    }
+
+    .logo_title {
+        font-size: 15px;
+    }
+
+    .logout_block {
+        display: inline;
+        position: static;
+    }
+
+    .name {
+        font-size: 10px;
+        margin-right: 0px;
+    }
+
+    .logout_btn {
+        margin-top: 10px;
+        display: block;
+        width: 60px;
+        height: 30px;
+        font-size: 10px;
+    }
+
+    .navigation_calendar {
+        width: 100%;
+    }
+
+    .arrow {
+        border-top: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+    }
+
+    .left {
+        border-right: 25px solid #868686;
+    }
+    
+    .right {
+        border-left: 25px solid #868686;
+    }
+
+    .year {
+        font-size: 30px;
+    }
+
+    .select-month {
+        width: 200px;
+        height: 35px;
+    }
+
+    .calendar {
+        width: 300px;
+    }
+
+    .calendar-box {
+        font-size: 15px;
+        width: 36px;
+        height: 36px;
+        margin-right: 5px;
+        margin-top: 5px;
+    }
+
+    .block_selector {
+        display: none;
+    }
+}

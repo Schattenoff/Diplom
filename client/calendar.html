@@ -13,22 +13,28 @@
 </head>
 <body>
     <header class="header">
-        <div class="nav">
-            <h1>Calendar Application</h1>
-            <div class="logout_block">
-                <p class="name">userName</p>
-                <a href="sign-in.html" class="logout_btn" onclick="helper.logout();">
-                    Logout
-                </a>
+        <div class="nav__header">
+            <div class="container">
+                <div class="nav">
+                    <h1 class="logo_title">Calendar Application</h1>
+                    <div class="logout_block">
+                        <p class="name">userName</p>
+                        <a href="sign-in.html" class="logout_btn" onclick="helper.logout();">
+                            Logout
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
     <section class="section-calendar">
         <div class="container">
             <div class="navigation_calendar">
-                <div class="arrow left" id="backButton" onclick="calendar.subYear()"></div>
-                <p class="year"></p>
-                <div class="arrow right" id="nextButton" onclick="calendar.addYear()"></div>
+                <div class="navigation">
+                    <div class="arrow left" id="backButton" onclick="calendar.subYear()"></div>
+                    <p class="year"></p>
+                    <div class="arrow right" id="nextButton" onclick="calendar.addYear()"></div>
+                </div>
                 <select id="select-month" class="select-month" onchange="calendar.changeMonth()">
                     <option value="0" class="option-month">January</option>
                     <option value="1" class="option-month">February</option>
@@ -45,16 +51,17 @@
                 </select>
             </div>
             <div id="calendar" class="calendar"></div>
-            <select name="color" id="select-color" class="select-color" onchange="update()">
-                <option value="0" class="option-color">Blue</option>
-                <option value="1" class="option-color">Black</option>
-                <option value="2" class="option-color">Yellow</option>
-            </select>
-            <div id="openModal" class="add_events">
-                <div class="horizontal-plus"></div>
-                <div class="vertical-plus"></div>
+            <div class="block_selector">
+                <select name="color" id="select-color" class="select-color" onchange="update()">
+                    <option value="0" class="option-color">Blue</option>
+                    <option value="1" class="option-color">Black</option>
+                    <option value="2" class="option-color">Yellow</option>
+                </select>
+                <div id="openModal" class="add_events">
+                    <div class="horizontal-plus"></div>
+                    <div class="vertical-plus"></div>
+                </div>
             </div>
-
             <div id="myModal" class="modal">
                 <div class="modal-content">
                   <span class="close">&times;</span>
@@ -69,7 +76,7 @@
               </div>
 
               <div id="myModalEvent" class="modal_event">
-                <div class="modal-content event_modal">
+                <div class="modal-content modal-content_event">
                   <span class="close" onclick="closeModal()">&times;</span>
                   <h1 class="modal-titleEvent">Date</h1>
                   <div class="container_events">
