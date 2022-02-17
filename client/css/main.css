@@ -498,7 +498,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .navigation_calendar {
-        width: 100%;
+        width: 270px;
+        margin: 0 auto;
     }
 
     .arrow {
@@ -520,22 +521,36 @@ h1, h2, h3, h4, h5, h6 {
 
     .select-month {
         width: 200px;
-        height: 35px;
+        height: 30px;
     }
 
     .calendar {
-        width: 300px;
+        width: 280px;
+        margin: 0 auto;
+    }
+    .calendar-box {
+        width: 35px;
+        height: 35px;
+        margin-top: 5px;
+        margin-right: 5px;
+        font-size: 20px;
     }
 
-    .calendar-box {
-        font-size: 15px;
-        width: 36px;
-        height: 36px;
-        margin-right: 5px;
-        margin-top: 5px;
-    }
 
     .block_selector {
-        display: none;
+        margin-top: 50px;
+    }
+
+    .select-color {
+        height: 30px;
+        right: auto;
+        bottom: auto;
+    }
+
+    .add_events {
+        height: 70px;
+        width: 70px;
+        top: -30px;
+        right: 10px;
     }
 }
