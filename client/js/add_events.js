@@ -53,7 +53,7 @@ function generateEvents(e) {
   calendar.renderCalendar();
   helper.message(true, "Event Add Complete!");
   title.value = "";
-  date.value = "";
+  dateMask.value = "";
   description.value = "";
   addModal.style.display = "none";
   } else return helper.message(false, "No validate date");
