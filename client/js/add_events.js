@@ -37,7 +37,7 @@ function generateEvents(e) {
     date: date.value,
     description: description.value
   };
-  fetch('http://localhost:3000/add-events', {
+  fetch('https://frozen-badlands-30191.herokuapp.com/add-events', {
         method: 'POST',
         headers: {
           'Authorization': 'Bearer ' + localStorage.getItem('token'),
@@ -53,7 +53,7 @@ function generateEvents(e) {
   calendar.renderCalendar();
   helper.message(true, "Event Add Complete!");
   title.value = "";
-  date.value = "";
+  dateMask.value = "";
   description.value = "";
   addModal.style.display = "none";
   } else return helper.message(false, "No validate date");

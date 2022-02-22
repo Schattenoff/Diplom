@@ -22,7 +22,7 @@ function onLoadEvents() {
       temp = data
     }
     else temp = data;
-    fetch('http://localhost:3000/events', {
+    fetch('https://frozen-badlands-30191.herokuapp.com/events', {
       headers: {'Authorization': 'Bearer ' + localStorage.getItem('token') }
     })
     .then(res => res.json())
